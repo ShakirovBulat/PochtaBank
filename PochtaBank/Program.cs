@@ -19,19 +19,22 @@ namespace PochtaBank
         {
             account.Ballance -= summ;
             System.Console.WriteLine("widthdraw Completed");
-            System.Console.WriteLine(account.Ballance);
+            System.Console.WriteLine($"ballance account - {account.Ballance}");
             return (int)summ;
         }
         public static int deposit(BankAccount account1, double summ)
         {
             account1.Ballance += summ;
             System.Console.WriteLine("Deposit Completed");
-            System.Console.WriteLine(account1.Ballance);
+            System.Console.WriteLine($"ballance account1 - {account1.Ballance}");
             return (int)summ;
         }
-        public static int takeCredit()
+        public static int takeCredit(BankAccount account2, double summ)
         {
-            return 0;
+            account2.Ballance += summ;
+            System.Console.WriteLine("Credit Completed");
+            System.Console.WriteLine($"ballance account1 - {account2.Ballance}");
+            return (int)summ;
         }
     }
 }

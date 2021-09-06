@@ -12,7 +12,7 @@ namespace PochtaBank
             BankAccount acc2 = new BankAccount();
             double summd = 1000;
             acc2.Ballance = 8000;
-            acc.Ballance = 1000;
+            acc.Ballance = 5000;
             if (acc.Ballance < summd)
             {
                 Console.WriteLine("Operation Failed");
@@ -21,6 +21,16 @@ namespace PochtaBank
             {
                 Operations.Transaction(acc, acc2, summd);
             }
+            if(acc.Ballance<summd)
+            {
+                Console.WriteLine("Operation Failed");
+            }
+            else
+            {
+                Operations.widthdraw(acc, summd);
+            }
+            Operations.deposit(acc, summd);
+            Operations.takeCredit(acc, summd);
         }
     }
 }
