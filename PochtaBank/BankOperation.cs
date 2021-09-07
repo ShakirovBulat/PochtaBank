@@ -16,53 +16,54 @@ namespace PochtaBank
             acc.Ballance = 10000;
             acc2.Ballance = 8000;
             {
-                Console.WriteLine("1)Transaction");
-                Console.WriteLine("2)widthdraw");
-                Console.WriteLine("3)deposit");
-                Console.WriteLine("4)takeCredit");
-                Console.Write("Выберите пункт меню");
-                String str = Console.ReadLine();
-                
-                switch (str)
+                while (true)
                 {
-                    case "1":
+                    Console.WriteLine("1)Transaction");
+                    Console.WriteLine("2)widthdraw");
+                    Console.WriteLine("3)deposit");
+                    Console.WriteLine("4)takeCredit");
+                    Console.Write("Выберите пункт меню");
+                    String str = Console.ReadLine();
 
-                        if (acc.Ballance < summ)
-                        {
-                            Console.WriteLine("Operation Failed");
-                        }
-                        else
-                        {
-                            Operations.Transaction(acc, acc2, summ);
-                        }
-                        break;
-                    case "2":
-                        if (acc.Ballance < summ)
-                        {
-                            Console.WriteLine("Operation Failed");
-                        }
-                        else
-                        {
-                            Operations.widthdraw(acc, summ);
-                        }
-                        break;
-                    case "3":
-                        Operations.deposit(acc, summ);
-                        break;
-                    case "4":
-                        Console.Write("На сколько дней взять кредит - ");
-                        double KolvoD = Convert.ToDouble(Console.ReadLine());
-                        Operations.takeCredit(acc, BankAccount.Pstavka, KolvoD, summ);
-                        break;
-                    default:
-                        Console.WriteLine("Вы выбрали не ту цифру");
-                        break;
-                    case "0":
-                        return;
-                } while (true) ;
+                    switch (str)
+                    {
+                        case "1":
+
+                            if (acc.Ballance < summ)
+                            {
+                                Console.WriteLine("Operation Failed");
+                            }
+                            else
+                            {
+                                Operations.Transaction(acc, acc2, summ);
+                            }
+                            break;
+                        case "2":
+                            if (acc.Ballance < summ)
+                            {
+                                Console.WriteLine("Operation Failed");
+                            }
+                            else
+                            {
+                                Operations.widthdraw(acc, summ);
+                            }
+                            break;
+                        case "3":
+                            Operations.deposit(acc, summ);
+                            break;
+                        case "4":
+                            Console.Write("На сколько дней взять кредит - ");
+                            double KolvoD = Convert.ToDouble(Console.ReadLine());
+                            Operations.takeCredit(acc, BankAccount.Pstavka, KolvoD, summ);
+                            break;
+                        default:
+                            Console.WriteLine("Вы выбрали не ту цифру");
+                            break;
+                        case "0":
+                            return;
+                    }
+                } 
             }
-
-
         }
     }
 }
