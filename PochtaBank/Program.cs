@@ -32,7 +32,7 @@ namespace PochtaBank
         public static int takeCredit(BankAccount account2, double summ, double kolvoD, double Pstavka)
         {
             account2.Ballance += summ;
-            account2.Zadoljennost += summ * (Pstavka + (Pstavka / (1 + Pstavka) * kolvoD - 1));
+            account2.Zadoljennost += (int)(summ * (Pstavka + (Pstavka / (1 + Pstavka) * kolvoD - 1)));
             System.Console.WriteLine("Credit Completed");
             System.Console.WriteLine($"ballance account2 - {account2.Ballance}");
             System.Console.WriteLine($"Zadoljennost account2 - {account2.Zadoljennost}");
