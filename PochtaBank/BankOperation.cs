@@ -54,6 +54,9 @@ namespace PochtaBank
                         double KolvoD = Convert.ToDouble(Console.ReadLine());
                         Operations.takeCredit(acc, BankAccount.Pstavka, KolvoD, summ);
                         break;
+                    default:
+                        Console.WriteLine("Вы выбрали не ту цифру");
+                        break;
                     case "0":
                         return;
                 } while (true) ;
