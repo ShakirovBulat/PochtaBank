@@ -10,9 +10,11 @@ namespace PochtaBank
         {
             BankAccount acc = new BankAccount();
             BankAccount acc2 = new BankAccount();
+            Console.Write("На сколько дней взять кредит - ");
             double KolvoD = Convert.ToDouble(Console.ReadLine());
-            double Pstavka = 5.7;
+            Console.Write("Сколько денег - ");
             double summ = Convert.ToDouble(Console.ReadLine());
+            double Pstavka = 5.7;
             acc2.Ballance = 8000;
             acc.Ballance = 5000;
             if (acc.Ballance < summ)
