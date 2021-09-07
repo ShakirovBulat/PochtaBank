@@ -22,16 +22,16 @@ namespace PochtaBank
                     Valerii.Ballance += summ;
                     System.Console.WriteLine("Transaction Completed");
                     Console.WriteLine($"ballance Alexandr - {Alexandr.Ballance}, ballance Valerii - {Valerii.Ballance}");
-                    break;
+                    goto case "0";
                 case "2":
                     Alexandr.Ballance += summ;
                     Valerii.Ballance -= summ;
                     System.Console.WriteLine("Transaction Completed");
                     Console.WriteLine($"ballance Alexandr - {Alexandr.Ballance}, ballance Valerii - {Valerii.Ballance}");
-                    break;
+                    goto case "0";
                 case "0":
                     return;
-            } while (true) ;
+            }
         }
         public static int widthdraw(BankAccount account, double summ)
         {
