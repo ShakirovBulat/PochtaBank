@@ -14,7 +14,6 @@ namespace PochtaBank
             double KolvoD = Convert.ToDouble(Console.ReadLine());
             Console.Write("Сколько денег - ");
             double summ = Convert.ToDouble(Console.ReadLine());
-            double Pstavka = 5.7;
             acc2.Ballance = 8000;
             acc.Ballance = 5000;
             if (acc.Ballance < summ)
@@ -34,7 +33,7 @@ namespace PochtaBank
                 Operations.widthdraw(acc, summ);
             }
             Operations.deposit(acc, summ);
-            Operations.takeCredit(acc, Pstavka, KolvoD, summ);
+            Operations.takeCredit(acc, BankAccount.Pstavka, KolvoD, summ);
         }
     }
 }

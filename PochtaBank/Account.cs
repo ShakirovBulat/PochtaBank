@@ -13,5 +13,6 @@ namespace PochtaBank
 
         public double Zadoljennost { get; set; }
 
+        public static double Pstavka = 5.7;
     }
 }
