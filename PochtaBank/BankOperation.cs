@@ -11,9 +11,9 @@ namespace PochtaBank
         {
             BankAccount acc = new BankAccount();
             BankAccount acc2 = new BankAccount();
-            Console.Write("Сколько денег - ");
+            Console.Write("Сколько денег для перевода - ");
             double summ = Convert.ToDouble(Console.ReadLine());
-            acc.Ballance = 5000;
+            acc.Ballance = 10000;
             acc2.Ballance = 8000;
             {
                 Console.WriteLine("1)Transaction");
