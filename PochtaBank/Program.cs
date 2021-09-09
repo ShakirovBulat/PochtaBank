@@ -47,7 +47,7 @@ namespace PochtaBank
             System.Console.WriteLine($"ballance account1 - {account1.Ballance}");
             return (int)summ;
         }
-        public static int takeCredit(BankAccount account2, double summ, double kolvoD, double Pstavka)
+        public static int takeCredit(BankAccount account2, double Pstavka,double kolvoD, double summ)
         {
             account2.Ballance += summ;
             account2.Zadoljennost += (int)(summ * (Pstavka + (Pstavka / (1 + Pstavka) * kolvoD - 1)));
